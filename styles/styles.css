@@ -4,12 +4,57 @@
 #15: utilize CSS flexbox at least once
 */
 
+@font-face {
+    font-family: 'BankofEnglandW01';
+    src: url('../fonts/BankOfEngland/BankofEnglandW01-Regular.woff2') format('woff2'),
+        url('../fonts/BankOfEngland/BankofEnglandW01-Regular.woff') format('woff'),
+        url('../fonts/BankOfEngland/BankofEnglandW01-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trajan Pro';
+    src: url('../fonts/TrajanPro/TrajanPro-Bold.woff2') format('woff2'),
+        url('../fonts/TrajanPro/TrajanPro-Bold.woff') format('woff'),
+        url('../fonts/TrajanPro/TrajanPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trajan Pro';
+    src: url('../fonts/TrajanPro/TrajanPro-Regular.woff2') format('woff2'),
+        url('../fonts/TrajanPro/TrajanPro-Regular.woff') format('woff'),
+        url('../fonts/TrajanPro/TrajanPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root
 {
 /* CSS HSL */
---rich-black-fogra-39: hsla(0, 0%, 6%, 1);
---blue: hsla(241, 82%, 53%, 1);
---red: hsla(0, 94%, 51%, 1);
+--dark-fogra: hsla(0, 0%, 5%, 1);
+--medium-fogra: hsla(0, 0%, 25%, 1);
+--light-fogra: hsla(0, 0%, 50%, 1);
+--dark-blue: hsla(241, 75%, 25%, 1);
+--medium-blue: hsla(241, 50%, 50%, 1);
+--light-blue: hsla(241, 25%, 75%, 1);
+--dark-red: hsla(0, 75%, 25%, 1);
+--medium-red: hsla(0, 50%, 50%, 1);
+--light-red: hsla(0, 25%, 75%, 1);
 
 /* SCSS Gradient */
 --gradient-right: linear-gradient(90deg, #101010ff, #2624E9ff, #F80C0Cff);
@@ -21,6 +66,7 @@
 --gradient-bottom-left: linear-gradient(315deg, #101010ff, #2624E9ff, #F80C0Cff);
 --gradient-radial: radial-gradient(#101010ff, #2624E9ff, #F80C0Cff);
 --gradient-top: linear-gradient(0deg, #101010ff, #2624E9ff, #F80C0Cff);
+--gradient-top-two-tone: linear-gradient(180deg, hsla(0, 0%, 6%, .9) 88%, hsla(0, 94%, 28.5%, .9) 96%, hsla(0, 75%, 25%, 1) 98%);
 
 font-size: 1vmin;
 }
@@ -28,41 +74,134 @@ font-size: 1vmin;
 body
 {    
     scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
 }
 
 .background-overlay
 {
-
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--dark-red);
+    z-index: -10;
 }
 
 #header
 {
     position: fixed;
     top: 0;
-    height: 10rem;
+    height: 15rem;
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto auto;
+    z-index: 1;
+    background-color: #222;
+}
+
+#header::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--gradient-top-two-tone);
+}
+
+.brand-title
+{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    padding-left: 8rem;
+    z-index: 2;
 }
 
 #header-img
 {
-
+    height: 130%;
+    min-width: auto;
+    z-index: 2;
+    scale: 1 / 1;
+    margin-top: -3rem;
 }
 
 #nav-bar
 {
-
+    width: 50%;
+    z-index: 2;
+    font-size: 2.8rem;
+    font-weight: 500;
 }
 
 #nav-ul
 {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
 
+.nav-link
+{
+    color: var(--light-blue);
+    padding: 2rem 4rem;
+}
+
+.nav-link:hover,
+.nav-link:focus
+{
+    background-color: hsla(0, 94%, 28.5%, .3);
+    color: #ccc;
+}
+
+.nav-link li
+{   
+}
+
+/* ============== START of header Media Querry for phone displays ============== */
+
+@media screen and (max-width: 767px) {
+    #header
+{
+    height: auto;
+}
+
+.brand-title
+{
+    display: none;
+}
+
+#nav-bar
+{
+    width: 100%;
+    z-index: 1;
+}
+
+#nav-ul
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
 }
 
 #nav-link
 {
 
 }
+}
+
+/* ============== END of header Media Querry for phone displays ============== */
 
 main
 {
@@ -171,5 +310,5 @@ figure figcaption
 
 footer
 {
-    
+
 }
