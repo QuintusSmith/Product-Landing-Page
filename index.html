@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redragon</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
+    
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <header id="header">
+        <img src="images/logo.png" alt="Redragon red logo image with transparent background" id="header-img">
+        <nav id="nav-bar">
+            <ul id="nav-ul">
+                <a href="#overview" class="nav-link"><li>Overview</li></a>
+                <a href="#specifications" class="nav-link"><li>Specifications</li></a>
+                <a href="#contact" class="nav-link"><li>Contact Us</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="video-and-images">
+            <figure id="video-figure">
+                <figcaption></figcaption>
+                <video controls preload="auto" poster="/images/Tocata.jpg" id="video">
+                    <source src="video/Tocata.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+            <div id="images-container">
+                <figure id="images-figure">
+                    <figcaption></figcaption>
+                    <div id="images-collection">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </figure>
+            </div>
+        </div>
+        <div id="short-description">
+            <h1 id="title"></h1>
+            <h3 id="sub-title"></h3>
+            <p id="short-summary"></p>
+        </div>
+    </main>
+
+    <section id="overview">
+
+    </section>
+
+    <section id="specifications">
+
+    </section>
+
+    <section id="contact">
+        <form action="https://www.freecodecamp.com/email-submit" method="GET" id="form">
+
+            <div class="input-collection">
+                <label for="email">Sign up for our newsletter</label>
+                <input type="email" name="email" id="email" placeholder="someone@somewhere">
+            </div>
+
+            <input type="submit" id="submit">Sign Up</button>
+
+        </form>
+    </section>
+
+    <footer id="footer">
+
+    </footer>
+
+</body>
+</html>
+
+<!-- 
+#1: header element with id="header" - done
+#2: image within the header with id="header-img" - done
+#3: Within #header a nav element with a id="nav-bar" - done
+#4: three clickable elements inside the nav each with nav-link class - done
+#5: a .nav-link in nav to  corresponding section - done
+#6: embedded product video with id="video" - done
+#7: form element with id="form" - done
+#8: Within form an input field with id="email" to enter email address. - done
+#9: #email input field placeholder text - done
+#11: submit input with id="submit" - done
+#12: #submit submitted to a static page https://www.freecodecamp.com/email-submit - done
+-->
