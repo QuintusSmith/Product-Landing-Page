@@ -4,6 +4,8 @@
 #15: utilize CSS flexbox at least once
 */
 
+/* @note Imported Fonts */
+
 @font-face {
     font-family: 'BankofEnglandW01';
     src: url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/BankOfEngland/BankofEnglandW01-Regular.woff2') format('woff2'),
@@ -34,6 +36,8 @@
     font-display: swap;
 }
 
+/* @note universal settings */
+
 *,
 *::after,
 *::before
@@ -42,6 +46,14 @@
     margin: 0;
     padding: 0;
 }
+
+:root
+{    
+    font-size: 1vmin;
+    color: #acacac;
+}
+
+/* @note variables */
 
 :root
 {
@@ -69,9 +81,9 @@
 --gradient-top-opacity: linear-gradient(0deg, hsla(0, 0%, 6%, .4), hsla(241, 82%, 53%, .3), hsla(0, 94%, 51%, .5));
 --gradient-top-two-tone: linear-gradient(180deg, hsla(0, 0%, 6%, .9) 88%, hsla(0, 94%, 28.5%, .9) 96%, hsla(0, 75%, 25%, 1) 98%);
 
-font-size: 1vmin;
-color: #acacac;
 }
+
+/* @note body display */
 
 body
 {    
@@ -92,6 +104,8 @@ body
     background-color: var(--dark-red);
     z-index: -10;
 }
+
+/* @note header */
 
 #header
 {
@@ -194,6 +208,8 @@ body
     transform: scale(1);
 }
 
+/* @todo main */
+
 main
 {
 
@@ -259,15 +275,21 @@ figure figcaption
 
 }
 
+/* @todo overview */
+
 #overview
 {
 
 }
 
+/* @todo specifications */
+
 #specifications
 {
 
 }
+
+/* @todo contact */
 
 #contact
 {
@@ -298,6 +320,8 @@ figure figcaption
 {
 
 }
+
+/* @todo footer */
 
 footer
 {
