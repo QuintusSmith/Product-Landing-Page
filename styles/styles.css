@@ -51,6 +51,7 @@
 {    
     font-size: 1vmin;
     color: #acacac;
+    font-family: 'Trajan Pro', 'Times New Roman', Times, serif;
 }
 
 /* @note variables */
@@ -67,6 +68,7 @@
 --dark-red: hsla(0, 75%, 25%, 1);
 --medium-red: hsla(0, 50%, 50%, 1);
 --light-red: hsla(0, 25%, 75%, 1);
+--light-red-opacity: hsla(0, 25%, 75%, .3);
 
 /* SCSS Gradient */
 --gradient-right: linear-gradient(90deg, #101010ff, #2624E9ff, #F80C0Cff);
@@ -88,6 +90,7 @@
 body
 {    
     scroll-behavior: smooth;
+    scroll-margin: 15.2rem;
     width: 100vw;
     height: 100vh;
     z-index: 0;
@@ -118,7 +121,7 @@ body
     justify-content: space-between;
     align-items: center;
     margin: auto auto;
-    z-index: 1;
+    z-index: 5;
     background-color: #222;
 }
 
@@ -131,7 +134,7 @@ body
     left: 0;
     right: 0;
     background: var(--gradient-top-two-tone);
-    z-index: 2;
+    z-index: 6;
 }
 
 .brand-title
@@ -142,14 +145,14 @@ body
     justify-content: flex-end;
     align-content: center;
     padding-left: 15rem;
-    z-index: 3;
+    z-index: 7;
 }
 
 #header-img
 {
     height: 130%;
     min-width: auto;
-    z-index: 3;
+    z-index: 7;
     scale: 1 / 1;
     margin-top: -3rem;
 }
@@ -157,7 +160,7 @@ body
 #nav-bar
 {
     width: auto;
-    z-index: 3;
+    z-index: 7;
     font-size: 4.2rem;
     font-weight: 100;
     letter-spacing: 1rem;
@@ -180,6 +183,7 @@ body
     position: relative;
     transition: 150ms linear;
     font-family: BankofEnglandW01;
+    text-shadow: 1rem 1rem 1rem var(--light-red-opacity);
 }
 
 .nav-link:hover,
@@ -208,78 +212,128 @@ body
     transform: scale(1);
 }
 
-/* @todo main */
+/* @note first impression content */
 
 main
 {
-
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 15.2rem;
+    background-color: hsla(0, 0%, 0%, .8);
 }
 
 #video-and-images
 {
-
-}
-
-figure figcaption
-{
-
-}
-
-#video-figure
-{
-
+    width: 48vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #video
 {
-
+    border-radius: 2%;
+    height: auto;
+    min-width: 100%;
+    width: 48vw;
+    margin-bottom: 1.5rem;
+    opacity: .8;
+    outline: none;
+    border: 1.5rem inset silver;
+    margin-top: .8rem;
+    box-shadow: 2rem 2rem 5rem 2rem black;
+    cursor: pointer;
 }
 
-#images-container
+#video:focus,
+#video:active,
+#video:hover
 {
-
+    opacity: 1;
 }
 
-#images-figure
+.images-container
 {
-
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 52vw;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 1.5rem;
 }
 
-#images-collection
+.image
 {
-
+    outline: none;
+    scale: 1 / 1;
+    height: auto;
+    width: 7vw;
+    text-align: center;
+    box-shadow: 2rem 2rem 5rem 2rem black;
+    opacity: .7;
+    cursor: pointer;
 }
 
-#images-collection img
+.image:hover,
+.image:focus,
+.image:active
 {
-
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 #short-description
 {
-
+    width: 32vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
 }
 
 #title
 {
-
+    font-size: 5.3rem;
+    font-family: 'Trajan Pro', 'Times New Roman', Times, serif;
+    text-shadow: 0rem 0rem 2rem white, .4rem .4rem 0rem white;
+    box-shadow: 0rem .5rem 0 .5rem #050505;
+    margin-bottom: 6rem;
+    font-weight: 900;
 }
 
 #sub-title
 {
-
+    font-size: 3.6rem;
+    font-family: 'Trajan Pro', 'Times New Roman', Times, serif;
+    text-shadow: .2rem .2rem 0rem #999;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    color: #aaa;
 }
 
 #short-summary
 {
-
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    font-family: 'Trajan Pro', 'Times New Roman', Times, serif;
+    text-shadow: .1rem .1rem 0rem #888;
+    font-weight: 200;
+    line-height: 2.7rem;
+    color: #999;
 }
 
 /* @todo overview */
 
 #overview
 {
-
+    scroll-snap-type: block mandatory;
 }
 
 /* @todo specifications */
