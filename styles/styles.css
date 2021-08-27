@@ -310,7 +310,7 @@ main
     width: auto;
 }
 
-/* @todo overview */
+/* @note overview */
 
 #overview
 {
@@ -369,6 +369,7 @@ main
     height: 84.1vh;
     width: 100%;
     margin: auto;
+    border-bottom: .5rem inset var(--dark-red) ;
 }
 
 .red
