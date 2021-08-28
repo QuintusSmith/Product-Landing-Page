@@ -7,98 +7,121 @@
 /* @note Imported Fonts */
 
 @font-face {
-    font-family: 'BankofEnglandW01';
-    src: url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/BankOfEngland/BankofEnglandW01-Regular.woff2') format('woff2'),
-        url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/BankOfEngland/BankofEnglandW01-Regular.woff') format('woff'),
-        url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/BankofEnglandW01-Regular.ttf') format('truetype');
+    font-family: "BankofEnglandW01";
+    src: url("https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/BankOfEngland/BankofEnglandW01-Regular.woff2")
+        format("woff2"),
+      url("https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/BankOfEngland/BankofEnglandW01-Regular.woff")
+        format("woff"),
+      url("https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/BankofEnglandW01-Regular.ttf")
+        format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-
-@font-face {
-    font-family: 'Trajan Pro';
-    src: url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Bold.woff2') format('woff2'),
-        url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Bold.woff') format('woff'),
-        url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: "Trajan Pro";
+    src: url("https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Bold.woff2")
+        format("woff2"),
+      url("https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Bold.woff")
+        format("woff"),
+      url("https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Bold.ttf")
+        format("truetype");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
-}
-
-@font-face {
-    font-family: 'Trajan Pro';
-    src: url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Regular.woff2') format('woff2'),
-        url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Regular.woff') format('woff'),
-        url('https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Regular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: "Trajan Pro";
+    src: url("https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Regular.woff2")
+        format("woff2"),
+      url("https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Regular.woff")
+        format("woff"),
+      url("https://raw.githubusercontent.com/QuintusSmith/Product-Landing-Page/master/fonts/TrajanPro/TrajanPro-Regular.ttf")
+        format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-
-/* @note universal settings */
-
-*,
-*::after,
-*::before
-{
+  }
+  
+  /* @note universal settings */
+  
+  *,
+  *::after,
+  *::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-:root
-{    
+  }
+  
+  :root {
     font-size: 1vmin;
     color: #acacac;
-    font-family: 'Trajan Pro', 'Times New Roman', Times, serif; 
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-}
-
-/* @note variables */
-
-:root
-{
-/* CSS HSL */
---dark-fogra: hsla(0, 0%, 5%, 1);
---medium-fogra: hsla(0, 0%, 25%, 1);
---light-fogra: hsla(0, 0%, 50%, 1);
---dark-blue: hsla(241, 75%, 25%, 1);
---medium-blue: hsla(241, 50%, 50%, 1);
---light-blue: hsla(241, 25%, 75%, 1);
---dark-red: hsla(0, 75%, 25%, 1);
---medium-red: hsla(0, 50%, 50%, 1);
---light-red: hsla(0, 25%, 75%, 1);
---light-red-opacity: hsla(0, 25%, 75%, .3);
-
-/* SCSS Gradient */
---gradient-right: linear-gradient(90deg, #101010ff, #2624E9ff, #F80C0Cff);
---gradient-bottom: linear-gradient(180deg, #101010ff, #2624E9ff, #F80C0Cff);
---gradient-left: linear-gradient(270deg, #101010ff, #2624E9ff, #F80C0Cff);
---gradient-top-right: linear-gradient(45deg, #101010ff, #2624E9ff, #F80C0Cff);
---gradient-bottom-right: linear-gradient(135deg, #101010ff, #2624E9ff, #F80C0Cff);
---gradient-top-left: linear-gradient(225deg, #101010ff, #2624E9ff, #F80C0Cff);
---gradient-bottom-left: linear-gradient(315deg, #101010ff, #2624E9ff, #F80C0Cff);
---gradient-radial: radial-gradient(#101010ff, #2624E9ff, #F80C0Cff);
---gradient-top: linear-gradient(0deg, #101010ff, #2624E9ff, #F80C0Cff);
---gradient-top-opacity: linear-gradient(0deg, hsla(0, 0%, 6%, .4), hsla(241, 82%, 53%, .3), hsla(0, 94%, 51%, .5));
---gradient-top-two-tone: linear-gradient(180deg, hsla(0, 0%, 6%, .9) 88%, hsla(0, 94%, 28.5%, .9) 96%, hsla(0, 75%, 25%, 1) 98%);
-
-}
-
-/* @note body display */
-
-body
-{    
+    scroll-snap-type: y relative;
+  }
+  
+  /* @note variables */
+  
+  :root {
+    /* CSS HSL */
+    --dark-fogra: hsla(0, 0%, 5%, 1);
+    --medium-fogra: hsla(0, 0%, 25%, 1);
+    --light-fogra: hsla(0, 0%, 50%, 1);
+    --dark-blue: hsla(241, 75%, 25%, 1);
+    --medium-blue: hsla(241, 50%, 50%, 1);
+    --light-blue: hsla(241, 25%, 75%, 1);
+    --dark-red: hsla(0, 75%, 25%, 1);
+    --medium-red: hsla(0, 50%, 50%, 1);
+    --light-red: hsla(0, 25%, 75%, 1);
+    --light-red-opacity: hsla(0, 25%, 75%, 0.3);
+  
+    /* SCSS Gradient */
+    --gradient-right: linear-gradient(90deg, #101010ff, #2624e9ff, #f80c0cff);
+    --gradient-bottom: linear-gradient(180deg, #101010ff, #2624e9ff, #f80c0cff);
+    --gradient-left: linear-gradient(270deg, #101010ff, #2624e9ff, #f80c0cff);
+    --gradient-top-right: linear-gradient(45deg, #101010ff, #2624e9ff, #f80c0cff);
+    --gradient-bottom-right: linear-gradient(
+      135deg,
+      #101010ff,
+      #2624e9ff,
+      #f80c0cff
+    );
+    --gradient-top-left: linear-gradient(225deg, #101010ff, #2624e9ff, #f80c0cff);
+    --gradient-bottom-left: linear-gradient(
+      315deg,
+      #101010ff,
+      #2624e9ff,
+      #f80c0cff
+    );
+    --gradient-radial: radial-gradient(#101010ff, #2624e9ff, #f80c0cff);
+    --gradient-top: linear-gradient(0deg, #101010ff, #2624e9ff, #f80c0cff);
+    --gradient-top-opacity: linear-gradient(
+      0deg,
+      hsla(0, 0%, 6%, 0.4),
+      hsla(241, 82%, 53%, 0.3),
+      hsla(0, 94%, 51%, 0.5)
+    );
+    --gradient-top-two-tone: linear-gradient(
+      180deg,
+      hsla(0, 0%, 6%, 0.9) 88%,
+      hsla(0, 94%, 28.5%, 0.9) 96%,
+      hsla(0, 75%, 25%, 1) 98%
+    );
+  }
+  
+  /* @note body display */
+  
+  body {
     width: 100vw;
     height: 100vh;
     z-index: 0;
     overflow-x: hidden;
-}
-
-.background-overlay
-{
+  }
+  
+  .background-overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -106,12 +129,11 @@ body
     right: 0;
     background-color: var(--dark-red);
     z-index: -10;
-}
-
-/* @note header */
-
-#header
-{
+  }
+  
+  /* @note header */
+  
+  #header {
     position: fixed;
     top: 0;
     height: 15rem;
@@ -121,61 +143,55 @@ body
     justify-content: space-between;
     align-items: center;
     margin: auto auto;
-    z-index: 5;
+    z-index: 8;
     background-color: #222;
-}
-
-#header::after
-{
-    content: '';
+  }
+  
+  #header::after {
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background: var(--gradient-top-two-tone);
-    z-index: 6;
-}
-
-.brand-title
-{
+    z-index: 9;
+  }
+  
+  .brand-title {
     height: 100%;
     width: 25%;
     display: flex;
     justify-content: flex-end;
     align-content: center;
     padding-left: 15rem;
-    z-index: 7;
-}
-
-#header-img
-{
+    z-index: 10;
+  }
+  
+  #header-img {
     height: 130%;
     min-width: auto;
-    z-index: 7;
+    z-index: 10;
     scale: 1 / 1;
     margin-top: -3rem;
-}
-
-#nav-bar
-{
+  }
+  
+  #nav-bar {
     width: auto;
-    z-index: 7;
+    z-index: 10;
     font-size: 4.2rem;
     font-weight: 100;
     letter-spacing: 1rem;
     margin-right: 5rem;
-}
-
-#nav-ul
-{
+  }
+  
+  #nav-ul {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-}
-
-.nav-link
-{
+  }
+  
+  .nav-link {
     outline: none;
     color: white;
     padding: 0rem 4rem;
@@ -183,39 +199,35 @@ body
     position: relative;
     transition: 150ms linear;
     font-family: BankofEnglandW01;
-    text-shadow: 1rem 1rem 1rem var(--light-red-opacity);   
-}
-
-.nav-link:hover,
-.nav-link:focus
-{
+    text-shadow: 1rem 1rem 1rem var(--light-red-opacity);
+  }
+  
+  .nav-link:hover,
+  .nav-link:focus {
     color: #eee;
-}
-
-.nav-link::after
-{
+  }
+  
+  .nav-link::after {
     transition: 150ms linear;
     transform-origin: center bottom;
     transform: scale(0);
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    border-bottom: .6rem inset hsla(0, 75%, 25%, .5);
-}
-
-.nav-link:hover::after,
-.nav-link:focus::after
-{
+    border-bottom: 0.6rem inset hsla(0, 75%, 25%, 0.5);
+  }
+  
+  .nav-link:hover::after,
+  .nav-link:focus::after {
     transform: scale(1);
-}
-
-/* @note first impression content */
-
-main
-{
+  }
+  
+  /* @note first impression content */
+  
+  main {
     width: 100vw;
     height: 68rem;
     display: flex;
@@ -223,15 +235,14 @@ main
     align-items: flex-start;
     margin: auto;
     margin-top: 15.2rem;
-    background-color: hsla(0, 0%, 0%, .8);
+    background-color: hsla(0, 0%, 0%, 0.8);
     scroll-snap-align: start;
     scroll-margin-top: 15rem;
     margin-top: 15.2rem;
     position: relative;
-}
-
-.video-container
-{
+  }
+  
+  .video-container {
     margin: auto 0;
     width: 48vw;
     display: block;
@@ -239,30 +250,27 @@ main
     align-items: center;
     height: 90%;
     background-color: black;
-}
-
-#video
-{
+  }
+  
+  #video {
     border-radius: 2%;
     height: 100%;
     min-width: 100%;
     width: 48vw;
-    opacity: .8;
+    opacity: 0.8;
     outline: none;
     border: 1.5rem inset silver;
     box-shadow: 2rem 2rem 5rem 2rem black;
     cursor: pointer;
-}
-
-#video:focus,
-#video:active,
-#video:hover
-{
+  }
+  
+  #video:focus,
+  #video:active,
+  #video:hover {
     opacity: 1;
-}
-
-#short-description
-{
+  }
+  
+  #short-description {
     max-width: min-content;
     width: auto;
     display: flex;
@@ -270,50 +278,47 @@ main
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
-}
-
-#title
-{
+  }
+  
+  #title {
     font-size: 5.3rem;
-    font-family: 'Trajan Pro', 'Times New Roman', Times, serif;
-    text-shadow: 0rem 0rem 2rem white, .4rem .4rem 0rem white;
-    box-shadow: 0rem .5rem 0 .5rem #050505;
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
+    text-shadow: 0.4rem 0.4rem 0rem white;
+    box-shadow: 0rem 0.5rem 0 0.5rem #050505;
     margin-bottom: 6rem;
     font-weight: 900;
     min-width: max-content;
     width: auto;
     color: white;
-}
-
-#sub-title
-{
+    letter-spacing: 0.5rem;
+  }
+  
+  #sub-title {
     font-size: 3.6rem;
-    font-family: 'Trajan Pro', 'Times New Roman', Times, serif;
-    text-shadow: .2rem .2rem 0rem #999;
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
+    text-shadow: 0.2rem 0.2rem 0rem #999;
     font-weight: 400;
     margin-bottom: 3rem;
     color: white;
     min-width: max-content;
     width: auto;
-}
-
-#short-summary
-{
+  }
+  
+  #short-summary {
     font-size: 1.8rem;
-    letter-spacing: .1rem;
-    font-family: 'Trajan Pro', 'Times New Roman', Times, serif;
-    text-shadow: .1rem .1rem 0rem #888;
+    letter-spacing: 0.1rem;
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
+    text-shadow: 0.1rem 0.1rem 0rem #888;
     font-weight: 200;
     line-height: 2.7rem;
     color: white;
     min-width: 60ch;
     width: auto;
-}
-
-/* @note overview */
-
-#overview
-{
+  }
+  
+  /* @note overview */
+  
+  #overview {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -322,10 +327,9 @@ main
     scroll-margin-top: 15.1rem;
     position: relative;
     height: auto;
-}
-
-.overview-title-container
-{
+  }
+  
+  .title-container {
     background-color: black;
     padding: 0rem;
     display: flex;
@@ -333,11 +337,12 @@ main
     align-items: center;
     position: relative;
     z-index: 4;
-}
-
-.overview-title-container::after
-{
-    content: '';
+    scroll-snap-align: start;
+    scroll-margin-top: 15.1rem;
+  }
+  
+  .title-container::after {
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -345,10 +350,10 @@ main
     right: 0;
     background: var(--gradient-top-two-tone);
     z-index: 5;
-}
-
-.overview-title
-{
+  }
+  
+  .overview-title,
+  .specifications-title {
     font-size: 10rem;
     font-family: BankofEnglandW01;
     letter-spacing: 2.4rem;
@@ -357,10 +362,9 @@ main
     color: white;
     margin: 0;
     z-index: 6;
-}
-
-.overview-collection
-{
+  }
+  
+  .overview-collection {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -369,37 +373,32 @@ main
     height: 84.1vh;
     width: 100%;
     margin: auto;
-    border-bottom: .5rem inset var(--dark-red) ;
-}
-
-.red
-{
+    border-bottom: 0.5rem inset var(--dark-red);
+  }
+  
+  .red {
     background-color: transparent;
-}
-
-.black
-{
+  }
+  
+  .black {
     background-color: black;
-}
-
-.overview-collection-image
-{
+  }
+  
+  .overview-collection-image {
     height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 50%;
-}
-
-.image
-{
+  }
+  
+  .image {
     width: 100%;
     height: 99%;
     margin: auto 1%;
-}
-
-.overview-collection-text
-{
+  }
+  
+  .overview-collection-text {
     width: 50%;
     height: 100%;
     display: flex;
@@ -409,126 +408,235 @@ main
     text-align: center;
     font-size: 5rem;
     letter-spacing: 2rem;
-    font-family: 'Trajan Pro', 'Times New Roman', Times, serif;
-    text-shadow: .1rem .1rem .2rem var(--medium-red);
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
+    text-shadow: 0.1rem 0.1rem 0.2rem var(--medium-red);
     font-weight: 200;
     line-height: 9rem;
     color: white;
-}
-
-/* @todo specifications */
-
-#specifications
-{
-
-}
-
-/* @todo contact */
-
-#contact
-{
-
-}
-
-#contact form
-{
-
-}
-
-.input-collection
-{
-
-}
-
-.input-collection label
-{
-
-}
-
-#email
-{
-
-}
-
-#submit
-{
-
-}
-
-/* @todo footer */
-
-footer
-{
-
-}
-
-/* ============== START of Media Querry for phone displays ============== */
-
-@media screen and (max-width: 479px) {
-    #header
-{
-    height: auto;
+  }
+  
+  /* @note specifications */
+  
+  #specifications {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    scroll-snap-align: start;
+    scroll-margin-top: 15.1rem;
+  }
+  
+  .specifications-content-collection {
+    scroll-snap-align: start;
+    scroll-margin-top: 15.1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin-top: 0.5rem;
+  }
+  
+  .specifications-block {
+    min-width: min-content;
+    max-width: fit-content;
+    width: 50%;
+    display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: black;
-    padding: 4rem 0rem;
     flex-direction: column;
-}
-
-.brand-title
-{
+  }
+  
+  .specifications-block h3 {
+    font-size: 5.3rem;
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
+    text-shadow: 0rem 0rem 2rem black, 0.1rem 0.1rem 0rem white;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+    font-weight: 700;
+    min-width: max-content;
+    width: auto;
+    color: white;
+    letter-spacing: 1rem;
+  }
+  
+  .specifications-block p {
+    font-size: 2.2rem;
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
+    text-shadow: 0.1rem 0.1rem 0rem #999;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color: white;
+    min-width: max-content;
+    width: auto;
+    line-height: 3.08rem;
+    letter-spacing: 0.25;
+  }
+  
+  /* @note contact */
+  
+  .form-section {
     height: auto;
+    width: 100%;
+    background-color: black;
+    padding: 0rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+    margin: 0;
+    border-top: 0.5rem inset var(--dark-red);
+  }
+  
+  .form-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--gradient-top-two-tone);
+    z-index: 5;
+    margin: 0;
+  }
+  
+  .sign-up-form {
+    z-index: 6;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-left: 0rem;
-}
-
-#header-img
-{
-    height: auto;
-    width: 50vw;
-    margin-top: 0rem;
-    opacity: .6;
-}
-
-#nav-bar
-{
-    width: 100%;
-    font-size: 10rem;
-    margin-right: 0rem;
-}
-
-#nav-ul
-{
-    justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
-    margin-bottom: 12rem;
-}
-
-.nav-link
-{
-    padding: 0rem 0rem;
-    height: min-content;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    background: var(--gradient-top-opacity);
-    margin-bottom: 3rem;
-}
-
-.nav-link:focus
-{
-    color: #eee;
-}
-
-.nav-link::after
-{
-    content: none;
-}
-}
-
-/* ============== END of Media Querry for phone displays ============== */
+    margin: 3rem 0rem;
+    padding: 0;
+  }
+  
+  .input-collection {
+    text-align: right;
+  }
+  
+  .sign-up-label {
+    font-size: 3.6rem;
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
+    text-shadow: 0.1rem 0.1rem 0rem #999;
+    font-weight: 500;
+    color: white;
+    min-width: max-content;
+    width: auto;
+    line-height: 3.08rem;
+    letter-spacing: 0.25;
+    cursor: pointer;
+    margin-right: 3rem;
+  }
+  
+  .sign-up-email {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 3.6rem;
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
+    text-shadow: 0.1rem 0.1rem 0rem #999;
+    font-weight: 500;
+    width: 33ch;
+    margin-right: 3rem;
+    background-color: hsla(0, 50%, 80%, 0.7);
+    border: 1rem inset hsla(0, 75%, 25%, 0.7);
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    color: hsla(0, 0%, 0%, 0.7);
+  }
+  
+  .sign-up-email:hover,
+  .sign-up-email:focus,
+  .sign-up-email:active {
+    border: 1rem inset hsla(0, 75%, 25%, 1);
+    background-color: hsla(0, 50%, 80%, 1);
+    color: hsla(0, 0%, 0%, 1);
+  }
+  
+  .sign-up-submit-btn {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 3.6rem;
+    font-family: "Trajan Pro", "Times New Roman", Times, serif;
+    text-shadow: 0.1rem 0.1rem 0rem black;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    color: hsla(0, 0%, 100%, 0.7);
+    border: 1rem outset hsla(0, 50%, 80%, 0.7);
+    background-color: hsla(0, 75%, 25%, 0.7);
+    border-radius: 2rem;
+  }
+  
+  .sign-up-submit-btn:hover,
+  .sign-up-submit-btn:focus,
+  .sign-up-submit-btn:active {
+    color: hsla(0, 0%, 0%, 1);
+    border: 1rem outset hsla(0, 75%, 25%, 1);
+    background-color: hsla(0, 50%, 80%, 1);
+  }
+  
+  /* ============== START of Media Querry for phone displays ============== */
+  
+  @media screen and (max-width: 479px) {
+    #header {
+      height: auto;
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: black;
+      padding: 4rem 0rem;
+      flex-direction: column;
+    }
+  
+    .brand-title {
+      height: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-left: 0rem;
+    }
+  
+    #header-img {
+      height: auto;
+      width: 50vw;
+      margin-top: 0rem;
+      opacity: 0.6;
+    }
+  
+    #nav-bar {
+      width: 100%;
+      font-size: 10rem;
+      margin-right: 0rem;
+    }
+  
+    #nav-ul {
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 12rem;
+    }
+  
+    .nav-link {
+      padding: 0rem 0rem;
+      height: min-content;
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      background: var(--gradient-top-opacity);
+      margin-bottom: 3rem;
+    }
+  
+    .nav-link:focus {
+      color: #eee;
+    }
+  
+    .nav-link::after {
+      content: none;
+    }
+  }
+  
+  /* ============== END of Media Querry for phone displays ============== */
+  
